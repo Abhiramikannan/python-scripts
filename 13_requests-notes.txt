@@ -1,0 +1,34 @@
+request in python
+
+types of requests:
+1. get: we use get request to fetch the data from server it generally dont accept body/json-data{credentials}.
+2. post: we use post request to publish data to database. 
+    lets say we want to register a user to our database, now to do this we will send a post request to our server
+    with users name and password. 
+    to store data(name/passwd) in database
+3. patch: updating
+4.put: updating
+5.delete: delete data frm database
+
+
+pydoc requests
+import requests
+       >>> r = requests.get('https://www.python.org')
+       >>> r.status_code or print (r)=get every response and we can filter
+
+import requests
+
+url = "https://httpbin.org/get"
+
+params = {
+    "q": "python",
+    "limit": 10
+}
+
+response = requests.get(url, params=params)
+
+or POST:
+
+       >>> payload = dict(key1='value1', key2='value2')
+       >>> r = requests.post('https://httpbin.org/post', data=payload)
+       >>> print(r.text)
